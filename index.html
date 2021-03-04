@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OREO Animation - Mohammed Yousuf</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="brand"></div>
+    <div class="image-area delay-none">
+      <div class="image-container">
+        <span class="splash-circle"></span>
+        <span class="splash-circle"></span>
+      <img src="assets/cookie1.png" alt="cookie"/>
+    </div>
+    </div>
+    <div class="text-area delay-none">
+      <span class="leave-anim">
+        the sporting<br /></span><span class="leave-anim">event of the year<br /></span>
+      <span class="leave-anim">
+        is Scoring<br /></span><span class="leave-anim">the last oreo<br /></span>
+    </div>
+  </div>
+  <script>
+    let delayedDisplayOut = document.querySelector('.delay-none')
+    let thirdText = document.querySelector('.text-area span:nth-child(3)');
+    let fourthText = document.querySelector('.text-area span:nth-child(4)');
+    thirdText.style.display = 'none'
+    fourthText.style.display = 'none'
+    setTimeout(function(){
+      thirdText.style.display='block'
+      fourthText.style.display='block'
+    },6500)
+    setTimeout(function(){
+      delayedDisplayOut.style.display = 'none'
+    },11000)
+  </script>
+</body>
+</html>
