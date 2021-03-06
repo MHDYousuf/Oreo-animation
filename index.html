@@ -24,20 +24,51 @@
       <span class="leave-anim">
         is Scoring<br /></span><span class="leave-anim">the last oreo<br /></span>
     </div>
+    <div class="delay-in splash-img">
+      <img src="assets/cookie2.png" alt='cookie-splash' />
+    </div>
+    <div class="delay-in text-area" style="flex-direction: column;">
+      <span class="leave-anim second-txt">
+        Join the<br /></span><span class="leave-anim second-txt">Playful network<br /></span>
+        <span class="last-text">Stay playful</span>
+        <div class="button">
+          Find out More
+        </div>
+    </div>
+
   </div>
   <script>
-    let delayedDisplayOut = document.querySelector('.delay-none')
+    let splashIMG = document.querySelector('.splash-img img')
+    let delayedDisplayOut = document.querySelectorAll('.delay-none')
+    let delayedIn = document.querySelectorAll('.delay-in')
+    let secondDelayedText = document.querySelectorAll('.second-txt')
     let thirdText = document.querySelector('.text-area span:nth-child(3)');
     let fourthText = document.querySelector('.text-area span:nth-child(4)');
+    let lastText = document.querySelector('.last-text')
     thirdText.style.display = 'none'
     fourthText.style.display = 'none'
+    lastText.style.display = 'none'
     setTimeout(function(){
       thirdText.style.display='block'
       fourthText.style.display='block'
     },6500)
     setTimeout(function(){
-      delayedDisplayOut.style.display = 'none'
+      for (i = 0; i < delayedDisplayOut.length; i++) {
+      delayedDisplayOut[i].style.display = 'none'
+      }
+      for (i = 0; i < delayedIn.length; i++) {
+      delayedIn[i].style.display="flex"      
+      }
     },11000)
+    setTimeout(function(){
+      for (i = 0; i < secondDelayedText.length; i++) {
+        secondDelayedText[i].style.display="none"      
+      }
+      splashIMG.src = './assets/cookie3.png';
+      splashIMG.style.height = '80vh';
+      lastText.style.display ='block';
+
+    },15000)
   </script>
 </body>
 </html>
